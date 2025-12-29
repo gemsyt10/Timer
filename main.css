@@ -1,0 +1,34 @@
+* {color: white;}
+html {background: #0F172A;}
+button:hover {opacity: 0.85;}
+button:active {transform: scale(0.95);}
+        
+h1 {  
+    display: flex;
+    justify-content: center;  
+    border: 3px solid #7B74FD;  
+    margin: 20px;  
+    height: 55px;
+    width: auto;
+    box-sizing: border-box;  
+    border-radius: 10px;  
+        }  
+        
+button {  
+    background-color: #8B85FF;  
+    border-color: #6F68FF;  
+    width: 85px;  
+    height: 35px;  
+    border-width: 3px;  
+    font-weight: bold;  
+    font-size: 15px;  
+    border-radius: 20px;
+    margin: 5px;
+    transition: 0.5s;
+}  
+        
+.btns {  
+    display: flex;
+    padding: 10px;  
+    justify-content: center;
+}  
