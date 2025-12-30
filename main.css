@@ -3,17 +3,18 @@ html {background: #0F172A;}
 button:hover {opacity: 0.85;}
 button:active {transform: scale(0.95);}
         
-h1 {  
-    display: flex;
-    justify-content: center;  
+.cont {  
     border: 3px solid #7B74FD;  
-    margin: 20px;  
-    height: 55px;
-    width: auto;
+    margin:20px;
     box-sizing: border-box;  
     border-radius: 10px;  
+    height: 80px;
         }  
-        
+h1, h2 {
+    display: flex;
+    justify-content: center;  
+    margin:0px;
+}
 button {  
     background-color: #8B85FF;  
     border-color: #6F68FF;  
@@ -32,3 +33,20 @@ button {
     padding: 10px;  
     justify-content: center;
 }  
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.timer {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 0;
+}
