@@ -12,7 +12,7 @@ const tickSound = new Audio('tick-timer.mp3');
 
 // -------------Функції таймера-------------
 const updateTimermessage = () => {
-    texth1.textContent = `Пройшло: ${timeMinutes}m ${timeSeconds}s`
+    texth1.textContent = `${timeMinutes}m ${timeSeconds}s`
 };
         
 updateTimermessage()
@@ -36,6 +36,7 @@ function startTimer() {
                 timeSeconds = 0;
                 timeMinutes++;
             }
+            texth1.style.animationIterationCount = "infinite"
             updateTimermessage();
             saveTime();
             play(tickSound)
@@ -54,6 +55,7 @@ function resetTimer() {
     timeMinutes = 0;
     updateTimermessage()
     saveTime()
+    texth1.style.animationIterationCount = 0
 }
         
 function pauseTimer() {
@@ -61,6 +63,7 @@ function pauseTimer() {
         clearInterval(clearintervalId)
         isRuning = false;
     }
+    texth1.style.animationIterationCount = 0
     play(offSound)
 }
 
@@ -78,4 +81,3 @@ cont.insertAdjacentHTML('beforeend', btnpause);
 document.querySelector('#butn-reset').addEventListener('click', resetTimer);
 document.querySelector('#btn-include').addEventListener('click', startTimer);
 document.querySelector('#btn-pause').addEventListener('click', pauseTimer)
-   
