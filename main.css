@@ -28,7 +28,7 @@ button {
     transition: 0.5s;
 }  
         
-.btns {  
+.btns, .load-reset-btns {  
     display: flex;
     padding: 10px;  
     justify-content: center;
