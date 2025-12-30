@@ -1,5 +1,4 @@
-   
-   // Створення констант та пошук елементів 
+// Створення констант та пошук елементів 
 let isRuning = false;
 let clearintervalId;
 let timeSeconds = Number(localStorage.getItem('timeSeconds')) || 0;  
@@ -7,6 +6,7 @@ let timeMinutes = Number(localStorage.getItem('timeMinutes')) || 0;
 let saveTimerTimeFromLoad = () => {
     localStorage.setItem("progressS", timeSeconds);
     localStorage.setItem("progressM", timeMinutes);
+    play(offSound);
 }
 const texth1 = document.querySelector('.timer');  
 const cont = document.querySelector('.btns');
@@ -102,5 +102,6 @@ document.querySelector('#load-btn').addEventListener('click', ()=>{
    timeSeconds = Number(localStorage.getItem("progressS")) || 0;
    timeMinutes = Number(localStorage.getItem("progressM")) || 0;
    updateTimermessage()
+   play(offSound);
    texth1.style.animationIterationCount = 0
 })
